@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kontaktujte MIKO-RK pohrebné služby. Nonstop linka 0905/954044. Revúca, Plešivec, Ružomberok.">
+    <title>Kontakt • MIKO-RK Pohrebné služby • Nonstop 0905/954044</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="MIKORK logo.png">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <img src="MIKORK logo.png" alt="MIKO-RK Logo">
+                <span>MIKO-RK</span>
+            </a>
+            
+            <nav>
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <ul class="nav-menu">
+                    <li><a href="index.html">Domov</a></li>
+                    <li><a href="o-nas.html">O nás</a></li>
+                    <li><a href="sluzby.html">Služby</a></li>
+                    <li><a href="cennik.html">Cenník</a></li>
+                    <li><a href="fotogaleria.html">Fotogaléria</a></li>
+                    <li><a href="kontakt.html" class="active">Kontakt</a></li>
+                </ul>
+            </nav>
+            
+            <a href="tel:+421905954044" class="emergency-phone">
+                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+                <span>0905/954044 NONSTOP</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="hero" style="height: 40vh; min-height: 300px;">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>KONTAKT</h1>
+            <p class="hero-subtitle">
+                Sme tu pre Vás kedykoľvek. Neváhajte nás kontaktovať 24 hodín denne.
+            </p>
+        </div>
+    </section>
+
+    <!-- Emergency Contact Banner -->
+    <section class="section section-green">
+        <div class="container">
+            <div style="text-align: center; max-width: 700px; margin: 0 auto;">
+                <h2 style="font-size: 28px; margin-bottom: 16px;">📞 Nonstop Linka</h2>
+                <a href="tel:+421905954044" style="font-size: 48px; font-weight: 700; color: var(--color-accent); text-decoration: none; display: block; margin-bottom: 8px;">
+                    0905 / 954 044
+                </a>
+                <p style="font-size: 18px; opacity: 0.9;">
+                    Zavolajte kedykoľvek – aj v noci, cez víkend alebo počas sviatkov.<br>
+                    V prípade naliehavej situácie sme k dispozícii okamžite.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section with Map and Form -->
+    <section class="contact section-beige">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-map">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2646.5!2d20.1167!3d48.6833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDjCsDQxJzAwLjAiTiAyMMKwMDcnMDAuMCJF!5e0!3m2!1ssk!2ssk!4v1234567890"
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                
+                <div class="contact-form-container">
+                    <h2>Napíšte nám</h2>
+                    <p>Vyplňte formulár a my Vás čoskoro budeme kontaktovať. Alebo nám zavolajte priamo.</p>
+                    
+                    <form class="contact-form" action="#" method="POST">
+                        <div class="form-group">
+                            <label for="name">Vaše meno *</label>
+                            <input type="text" id="name" name="name" required placeholder="Ján Novák">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" placeholder="jan.novak@email.sk">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Telefón *</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="0905 123 456">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Správa</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Vaša správa..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Odoslať správu</button>
+                    </form>
+                    
+                    <div class="contact-phone">
+                        <p>Alebo nás zavolajte:</p>
+                        <a href="tel:+421905954044">0905/954044</a>
+                        <span>NONSTOP</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Information Cards -->
+    <section class="section section-white">
+        <div class="container">
+            <h2 class="text-center" style="margin-bottom: 60px;">Kontaktné informácie</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; max-width: 900px; margin: 0 auto;">
+                <div style="background: var(--color-background); padding: 30px; border-radius: 12px; border-left: 4px solid var(--color-accent);">
+                    <h3 style="margin-bottom: 16px; display: flex; align-items: center; gap: 10px;">
+                        📍 Revúca
+                    </h3>
+                    <p style="margin-bottom: 8px;"><strong>MIKO-RK s.r.o.</strong></p>
+                    <p style="margin-bottom: 8px;">Muránska 5<br>050 01 Revúca</p>
+                    <p style="margin-bottom: 8px;">📞 <a href="tel:+421905954044" style="color: var(--color-primary); font-weight: 600;">0905/954044</a></p>
+                    <p>📧 <a href="mailto:info@miko-rk.sk" style="color: var(--color-primary);">info@miko-rk.sk</a></p>
+                </div>
+
+                <div style="background: var(--color-background); padding: 30px; border-radius: 12px; border-left: 4px solid var(--color-accent);">
+                    <h3 style="margin-bottom: 16px; display: flex; align-items: center; gap: 10px;">
+                        📍 Plešivec
+                    </h3>
+                    <p style="margin-bottom: 8px;"><strong>MIKO-RK s.r.o.</strong></p>
+                    <p style="margin-bottom: 8px;">Okružná 428<br>049 11 Plešivec</p>
+                    <p style="margin-bottom: 8px;">📞 <a href="tel:+421905954044" style="color: var(--color-primary); font-weight: 600;">0905/954044</a></p>
+                    <p>📧 <a href="mailto:info@miko-rk.sk" style="color: var(--color-primary);">info@miko-rk.sk</a></p>
+                </div>
+            </div>
+
+            <div style="max-width: 900px; margin: 40px auto 0; background: var(--color-primary); color: white; padding: 30px; border-radius: 12px; text-align: center;">
+                <h3 style="color: var(--color-accent); margin-bottom: 16px;">⏰ Prevádzkové hodiny</h3>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px;">
+                    <div>
+                        <p style="font-weight: 700; margin-bottom: 8px; font-size: 18px;">Nonstop linka</p>
+                        <p style="opacity: 0.9;">24 hodín denne<br>7 dní v týždni<br>Vrátane sviatkov</p>
+                    </div>
+                    <div>
+                        <p style="font-weight: 700; margin-bottom: 8px; font-size: 18px;">Kancelária</p>
+                        <p style="opacity: 0.9;">Pondelok – Piatok<br>8:00 – 16:00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Reach Us -->
+    <section class="section section-beige">
+        <div class="container">
+            <div style="max-width: 800px; margin: 0 auto;">
+                <h2 class="text-center" style="margin-bottom: 40px;">Ako sa k nám dostanete</h2>
+                
+                <div style="display: grid; gap: 24px;">
+                    <div style="display: flex; gap: 16px; align-items: start;">
+                        <div style="background: var(--color-accent); color: var(--color-primary); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0;">🚗</div>
+                        <div>
+                            <h3 style="margin-bottom: 8px; font-size: 18px;">Autom</h3>
+                            <p style="color: #5a6960;">
+                                <strong>Revúca:</strong> Naša pobočka sa nachádza v centre mesta na ulici Muránska 5. 
+                                K dispozícii je parkovanie priamo pred budovou.<br><br>
+                                <strong>Plešivec:</strong> Pobočka je na Okružnej ulici č. 428, ľahko dostupná 
+                                z hlavnej cesty.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; gap: 16px; align-items: start;">
+                        <div style="background: var(--color-accent); color: var(--color-primary); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0;">🚌</div>
+                        <div>
+                            <h3 style="margin-bottom: 8px; font-size: 18px;">Verejnou dopravou</h3>
+                            <p style="color: #5a6960;">
+                                Obe pobočky sú dostupné mestskou hromadnou dopravou. 
+                                Najbližšia zastávka je vzdialenosť 200 metrov.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; gap: 16px; align-items: start;">
+                        <div style="background: var(--color-accent); color: var(--color-primary); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0;">♿</div>
+                        <div>
+                            <h3 style="margin-bottom: 8px; font-size: 18px;">Bezbariérový prístup</h3>
+                            <p style="color: #5a6960;">
+                                Naše priestory sú bezbariérové a prístupné pre osoby s obmedzenou mobilitou.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <div class="footer-logo">MIKO-RK</div>
+                    <p class="footer-tagline">S úctou k životu a spomienkam</p>
+                    <p>
+                        Spoločnosť MIKO-RK s.r.o. poskytuje profesionálne a súcitné pohrebné 
+                        služby v regióne Ružomberok, Revúca a okolie.
+                    </p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Rýchle odkazy</h3>
+                    <ul class="footer-links">
+                        <li><a href="o-nas.html">O nás</a></li>
+                        <li><a href="sluzby.html">Služby</a></li>
+                        <li><a href="cennik.html">Cenník</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="kontakt.html">Kontakt</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column footer-contact">
+                    <h3>Kontakt</h3>
+                    <p><strong>MIKO-RK s.r.o.</strong></p>
+                    <p>Muránska 5<br>050 01 Revúca</p>
+                    <p>Okružná 428<br>049 11 Plešivec</p>
+                    <p>📞 0905/954044</p>
+                    <p>📧 info@miko-rk.sk</p>
+                </div>
+                
+                <div class="footer-column footer-hours">
+                    <h3>Prevádzkové hodiny</h3>
+                    <p><strong>Nonstop linka:</strong><br>24 hodín denne<br>7 dní v týždni</p>
+                    <p><strong>Kancelária:</strong><br>Po-Pia: 8:00-16:00</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 MIKO-RK s.r.o. • Všetky práva vyhradené • Ochrana údajov</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Call Button -->
+    <a href="tel:+421905954044" class="floating-call">
+        <div class="floating-call-btn">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+        </div>
+    </a>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
+
