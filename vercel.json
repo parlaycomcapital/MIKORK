@@ -1,31 +1,5 @@
 {
   "version": 2,
-  "name": "miko-rk-funeral-services",
-  "builds": [
-    {
-      "src": "**/*.html",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "**/*.css",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "**/*.js",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "**/*.{jpg,jpeg,png,gif,svg,webp,ico}",
-      "use": "@vercel/static"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/$1"
-    }
-  ],
-  "cleanUrls": true,
-  "trailingSlash": false
+  "public": true
 }
 
