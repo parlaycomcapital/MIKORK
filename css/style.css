@@ -1526,16 +1526,76 @@ a:hover {
   animation: breathe 3s ease-in-out infinite;
 }
 
+/* Subtle Glow - Ambient */
+@keyframes subtleGlow {
+  0%, 100% {
+    box-shadow: 0 2px 8px rgba(200, 168, 115, 0.2);
+  }
+  50% {
+    box-shadow: 0 4px 16px rgba(200, 168, 115, 0.35), 0 0 20px rgba(200, 168, 115, 0.15);
+  }
+}
+
+/* Scroll Indicator - Gentle Hint */
+.scroll-indicator {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--color-white);
+  opacity: 0.8;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: bounce 2s ease-in-out infinite;
+  z-index: 10;
+}
+
+.scroll-indicator svg {
+  width: 32px;
+  height: 32px;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
+}
+
+.scroll-indicator:hover {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-4px);
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, 10px);
+  }
+}
+
 /* Scroll Reveal */
 .scroll-reveal {
   opacity: 0;
   transform: translateY(40px);
-  transition: all 0.8s ease-out;
+  transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.scroll-reveal.revealed {
-  opacity: 1;
-  transform: translateY(0);
+.scroll-reveal.revealed,
+.revealed {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* Form Success Message Animation */
+@keyframes formSuccess {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
 }
 
 /* ========================================
