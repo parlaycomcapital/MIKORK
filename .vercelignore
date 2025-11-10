@@ -1,0 +1,24 @@
+# Documentation (not needed for live site)
+00-Executive-Summary.md
+01-Brand-Identity-Guidelines.md
+02-Website-Structure-and-Navigation.md
+03-Content-Copywriting-Guide.md
+04-Homepage-Design-Concept.md
+05-SEO-Technical-Strategy.md
+06-Platform-CMS-Recommendations.md
+07-Design-Inspiration-Examples.md
+08-Implementation-Roadmap.md
+QUICK-REFERENCE.md
+WEBSITE-README.md
+LOCALHOST-GUIDE.md
+START-HERE.md
+
+# Local development files
+START-LOCAL-SERVER.bat
+OPEN-WEBSITE.bat
+.git/
+.gitignore
+
+# README (optional - keep or remove)
+# README.md
+
