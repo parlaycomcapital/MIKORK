@@ -144,12 +144,24 @@ li + li {
 
 /* Section Spacing - Breathing Room */
 section {
-  padding: 80px 0;
+  padding: 100px 0;
+}
+
+@media (max-width: 968px) {
+  section {
+    padding: 80px 0;
+  }
 }
 
 @media (max-width: 768px) {
   section {
     padding: 60px 0;
+  }
+}
+
+@media (max-width: 640px) {
+  section {
+    padding: 50px 0;
   }
 }
 
@@ -170,7 +182,19 @@ a:hover {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 var(--spacing-md);
+  padding: 0 32px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 0 16px;
+  }
 }
 
 /* Content Container - Optimal Reading Width */
@@ -421,17 +445,26 @@ a:hover {
    ======================================== */
 .hero {
   position: relative;
-  min-height: 600px;
+  min-height: 75vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   background: linear-gradient(135deg, 
-    rgba(242, 237, 228, 0.95) 0%, 
-    rgba(242, 237, 228, 0.85) 100%),
-    url('../images/hero-bg.jpg') center/cover;
+    rgba(47, 62, 53, 0.75) 0%, 
+    rgba(47, 62, 53, 0.85) 100%),
+    url('../images/hero-bg.jpg') center/cover no-repeat;
+  background-attachment: fixed;
   overflow: hidden;
-  padding: var(--spacing-xl) var(--spacing-md);
+  padding: 120px 32px 80px;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 60vh;
+    padding: 100px 24px 60px;
+    background-attachment: scroll;
+  }
 }
 
 .hero::before {
@@ -450,7 +483,8 @@ a:hover {
 .hero-content {
   position: relative;
   z-index: 2;
-  max-width: 800px;
+  max-width: 900px;
+  margin: 0 auto;
   animation: fadeInUp 0.8s ease-out;
 }
 
@@ -561,11 +595,21 @@ a:hover {
   box-shadow: var(--shadow-lg);
 }
 
-.cta-buttons {
+.cta-buttons,
+.hero-cta {
   display: flex;
-  gap: var(--spacing-sm);
+  gap: 20px;
   justify-content: center;
   flex-wrap: wrap;
+  margin-top: 48px;
+}
+
+@media (max-width: 640px) {
+  .cta-buttons,
+  .hero-cta {
+    flex-direction: column;
+    gap: 16px;
+  }
 }
 
 /* ========================================
@@ -577,9 +621,18 @@ a:hover {
 
 .intro-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: var(--spacing-lg);
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
   align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 968px) {
+  .intro-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
 }
 
 .intro-image {
@@ -673,20 +726,47 @@ a:hover {
 }
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: var(--spacing-md);
-  margin-top: var(--spacing-lg);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 64px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 968px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
 }
 
 .service-card {
   background: var(--color-white);
-  padding: var(--spacing-lg);
+  padding: 40px 32px;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-sm);
   transition: all var(--transition-normal);
   border: 1px solid rgba(199, 168, 126, 0.15);
   position: relative;
   overflow: hidden;
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .service-card {
+    padding: 32px 24px;
+    min-height: auto;
+  }
 }
 
 .service-card::before {
@@ -747,9 +827,26 @@ a:hover {
 
 .features-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: var(--spacing-lg);
-  margin-top: var(--spacing-lg);
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  margin-top: 64px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 968px) {
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
 }
 
 .feature-item {
@@ -792,9 +889,26 @@ a:hover {
    ======================================== */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: var(--spacing-sm);
-  margin-top: var(--spacing-lg);
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 64px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 968px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
 }
 
 .gallery-item {
