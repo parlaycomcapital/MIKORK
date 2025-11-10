@@ -64,9 +64,9 @@ html {
 
 body {
   font-family: var(--font-body);
-  font-size: 16px;
-  line-height: 1.7;
-  color: var(--color-primary);
+  font-size: 17px;
+  line-height: 1.8;
+  color: var(--color-text-dark);
   background-color: var(--color-background);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -91,13 +91,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: clamp(36px, 5vw, 56px);
+  font-size: clamp(40px, 5vw, 64px);
   font-weight: 600;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
+  margin-bottom: 24px;
+  line-height: 1.15;
 }
 
 h2 {
-  font-size: clamp(28px, 4vw, 40px);
+  font-size: clamp(32px, 4vw, 48px);
+  margin-bottom: 20px;
+  line-height: 1.25;
   font-weight: 600;
 }
 
@@ -108,9 +112,45 @@ h3 {
 }
 
 p {
-  margin-bottom: var(--spacing-sm);
-  line-height: 1.8;
+  margin-bottom: 20px;
+  line-height: 1.85;
   color: var(--color-text-dark);
+  font-size: 17px;
+  max-width: 75ch;
+  letter-spacing: 0.01em;
+}
+
+p + p {
+  margin-top: 16px;
+}
+
+/* Lists - Better Readability */
+ul, ol {
+  margin: 20px 0;
+  padding-left: 32px;
+  line-height: 1.9;
+}
+
+li {
+  margin-bottom: 12px;
+  font-size: 17px;
+  color: var(--color-text-dark);
+  letter-spacing: 0.01em;
+}
+
+li + li {
+  margin-top: 12px;
+}
+
+/* Section Spacing - Breathing Room */
+section {
+  padding: 80px 0;
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 60px 0;
+  }
 }
 
 a {
@@ -131,6 +171,12 @@ a:hover {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 var(--spacing-md);
+}
+
+/* Content Container - Optimal Reading Width */
+.content-container {
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 /* Text Alignment Utilities */
@@ -409,28 +455,34 @@ a:hover {
 }
 
 .hero-subtitle {
-  font-family: var(--font-accent);
-  font-size: clamp(18px, 3vw, 24px);
-  color: var(--color-accent);
-  margin-bottom: var(--spacing-sm);
-  font-weight: 500;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  font-size: 14px;
+  font-family: var(--font-body);
+  font-size: clamp(18px, 2.5vw, 22px);
+  color: var(--color-white);
+  margin-bottom: var(--spacing-md);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  line-height: 1.7;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero h1 {
-  margin-bottom: var(--spacing-md);
-  color: var(--color-primary);
-  text-shadow: 0 2px 8px rgba(255, 255, 255, 0.5);
+  margin-bottom: 32px;
+  color: var(--color-white);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+  line-height: 1.15;
 }
 
 .hero-description {
-  font-size: clamp(16px, 2.5vw, 20px);
-  color: var(--color-text-dark);
+  font-size: clamp(17px, 2.5vw, 21px);
+  color: rgba(255, 255, 255, 0.95);
   margin-bottom: var(--spacing-lg);
-  line-height: 1.8;
+  line-height: 1.75;
   font-weight: 400;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* ========================================
@@ -438,9 +490,9 @@ a:hover {
    ======================================== */
 .btn {
   display: inline-block;
-  padding: 16px 40px;
+  padding: 18px 42px;
   font-family: var(--font-body);
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 600;
   text-align: center;
   text-decoration: none;
@@ -448,7 +500,8 @@ a:hover {
   transition: all var(--transition-normal);
   cursor: pointer;
   border: 2px solid transparent;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.02em;
+  line-height: 1.5;
   position: relative;
   overflow: hidden;
 }
@@ -555,8 +608,11 @@ a:hover {
 }
 
 .intro-content p {
-  margin-bottom: var(--spacing-md);
-  line-height: 1.8;
+  margin-bottom: 24px;
+  line-height: 1.9;
+  font-size: 18px;
+  color: var(--color-text-dark);
+  letter-spacing: 0.01em;
 }
 
 /* Value Badges */
@@ -673,9 +729,11 @@ a:hover {
 }
 
 .service-card p {
-  color: var(--color-text-light);
-  line-height: 1.8;
-  margin-bottom: var(--spacing-md);
+  color: var(--color-text-dark);
+  line-height: 1.85;
+  margin-bottom: 20px;
+  font-size: 16px;
+  letter-spacing: 0.01em;
 }
 
 /* ========================================
@@ -816,25 +874,28 @@ a:hover {
 
 .form-group label {
   display: block;
-  margin-bottom: var(--spacing-xs);
+  margin-bottom: 10px;
   font-weight: 600;
   color: var(--color-primary);
-  font-size: 14px;
-  letter-spacing: 0.3px;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  line-height: 1.5;
 }
 
 .form-group input,
 .form-group textarea,
 .form-group select {
   width: 100%;
-  padding: 14px 18px;
+  padding: 16px 20px;
   border: 2px solid rgba(199, 168, 126, 0.3);
   border-radius: var(--radius-sm);
   font-family: var(--font-body);
-  font-size: 15px;
+  font-size: 16px;
   background: var(--color-white);
-  color: var(--color-primary);
+  color: var(--color-text-dark);
   transition: all var(--transition-fast);
+  line-height: 1.6;
+  letter-spacing: 0.01em;
 }
 
 .form-group input:focus,
@@ -1182,17 +1243,57 @@ a:hover {
     font-size: 24px;
   }
   
-  /* Typography Mobile */
+  /* Typography Mobile - Enhanced Readability */
+  html {
+    font-size: 16px;
+  }
+  
+  body {
+    font-size: 16px;
+    line-height: 1.75;
+  }
+  
   h1 {
-    font-size: 32px;
+    font-size: 36px;
+    line-height: 1.2;
+    margin-bottom: 20px;
   }
   
   h2 {
-    font-size: 26px;
+    font-size: 28px;
+    line-height: 1.3;
+    margin-bottom: 16px;
+  }
+  
+  h3 {
+    font-size: 22px;
+    line-height: 1.4;
+  }
+  
+  p {
+    font-size: 16px;
+    line-height: 1.75;
+    margin-bottom: 18px;
+  }
+  
+  li {
+    font-size: 16px;
+    line-height: 1.75;
   }
   
   .hero-description {
+    font-size: 17px;
+    line-height: 1.7;
+  }
+  
+  .intro-content p {
+    font-size: 17px;
+    line-height: 1.8;
+  }
+  
+  .btn {
     font-size: 16px;
+    padding: 16px 36px;
   }
   
   /* Container Mobile */
