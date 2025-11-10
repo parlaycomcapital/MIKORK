@@ -867,3 +867,4 @@ AFTER:
 *Prepared with care and attention to detail for MIKO-RK pohrebné služby.*  
 *S úctou k životu a spomienkam.* 🌿
 
+
