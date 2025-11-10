@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Font Imports - Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap');
+
+@layer base {
+  :root {
+    --color-forest: #2F3E35;
+    --color-beige: #F2EDE4;
+    --color-gold: #A47844;
+  }
+  
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-brand-beige text-brand-forest font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  /* Glassmorphism Effect */
+  .glass {
+    @apply backdrop-blur-md bg-white/80 border border-white/20;
+  }
+  
+  /* Smooth Gradient Overlays */
+  .gradient-overlay {
+    @apply bg-gradient-to-b from-brand-forest/80 to-brand-forest/60;
+  }
+  
+  /* Elegant Hover Effects */
+  .hover-lift {
+    @apply transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl;
+  }
+  
+  /* Custom Scrollbar */
+  .custom-scrollbar::-webkit-scrollbar {
+    @apply w-2;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-track {
+    @apply bg-brand-beige;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-brand-gold rounded-full;
+  }
+  
+  /* Elegant Underline Animation */
+  .underline-animation {
+    @apply relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-brand-gold after:transition-all after:duration-300 hover:after:w-full;
+  }
+}
+
+@layer utilities {
+  /* Text Gradient */
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-brand-forest to-brand-gold;
+  }
+  
+  /* Smooth Transitions */
+  .transition-smooth {
+    @apply transition-all duration-500 ease-out;
+  }
+  
+  /* Fade In Animation */
+  .animate-in {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+}
+
+/* Custom Selection */
+::selection {
+  @apply bg-brand-gold/30 text-brand-forest;
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Remove Spinner from Number Input */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
