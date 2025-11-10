@@ -52,14 +52,15 @@ export const metadata: Metadata = {
     title: 'MIKO-RK Pohrebné služby',
     description: 'Profesionálne pohrebné služby v Ružomberku',
   },
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-    maximumScale: 5,
-  },
   verification: {
     google: 'your-google-verification-code',
   },
+}
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
 }
 
 export default function RootLayout({
